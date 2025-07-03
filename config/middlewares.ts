@@ -1,7 +1,6 @@
 export default [
   "strapi::logger",
   "strapi::errors",
-  "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
@@ -18,6 +17,12 @@ export default [
           "connect-src": ["https://proxy-event.ckeditor.com"],
         },
       },
+    },
+  },
+  {
+    name: "strapi::cors",
+    config: {
+      origin: [process.env.CMS_URL, process.env.NQBRAL_GAMES_URL],
     },
   },
 ];
