@@ -13,8 +13,16 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "script-src": ["https://cdn.ckeditor.com"],
-          "connect-src": ["https://proxy-event.ckeditor.com"],
+          "default-src": ["'self'"],
+          "script-src": ["'self'", "https://cdn.ckeditor.com"],
+          "connect-src": ["'self'", "https://proxy-event.ckeditor.com"],
+          "style-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "https://cdn.ckeditor.com",
+          ],
+          "img-src": ["'self'", "data:"],
+          "font-src": ["'self'"],
         },
       },
     },
