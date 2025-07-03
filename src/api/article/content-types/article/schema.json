@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "preset": "rich",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODMxMjMxOTksImp0aSI6ImE3Y2U5OTY2LWE4M2UtNGM3Ny04ODBjLTliMTg5Y2IxMzMxZCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJ2YyI6ImRkODRhNzliIn0.bx9TEVaKx_ZY9cmB1QW-3epCT2F-XivItou_hUl8FLiI0MkqvaB3ues7akhh_R_i5SJQ7BfuErMp_Pq_2c_T_g"
+      },
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "articles"
+    }
+  }
+}
