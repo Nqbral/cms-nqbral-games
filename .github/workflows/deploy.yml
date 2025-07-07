@@ -29,10 +29,6 @@ jobs:
           docker rm $(docker ps -a --filter "name=^cms-nqbral-games" -q)
           echo "Remove images"
           docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}" | grep "^cms-nqbral-games")
-          echo "Remove volumes"
-          docker volume rm $(docker volume ls --format "{{.Name}}" | grep "^cms-nqbral-games")
-          echo "Remove networks"
-          docker network rm $(docker network ls --format "{{.Name}}" | grep "^cms-nqbral-games")
           EOF
 
       - name: Deploy via SSH
