@@ -31,6 +31,9 @@ export default [
     name: "strapi::cors",
     config: {
       origin: [process.env.CMS_URL, process.env.NQBRAL_GAMES_URL],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+      headers: "*",
+      credentials: true,
     },
   },
 ];
