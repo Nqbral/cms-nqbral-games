@@ -15,14 +15,6 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "nqbral-games-preset"
-      },
-      "required": true
-    },
     "excerpt": {
       "type": "text",
       "required": true
