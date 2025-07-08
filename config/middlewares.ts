@@ -3,7 +3,14 @@ export default [
   "strapi::errors",
   "strapi::poweredBy",
   "strapi::query",
-  "strapi::body",
+  {
+    name: "strapi::body",
+    config: {
+      jsonLimit: "100mb",
+      formLimit: "100mb",
+      textLimit: "100mb",
+    },
+  },
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
