@@ -276,21 +276,21 @@ const myCustomPreset: Preset = {
         options: [
           {
             name: "small",
-            title: "Petite image (w-32)",
+            title: "Petite image",
             icon: `
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="5" width="6" height="10" fill="#444"/>
                 <rect x="10" y="5" width="8" height="10" fill="#CCC"/>
             </svg>
             `,
-            className: "mx-auto block w-32",
+            className: "mx-auto block small-image",
             modelElements: ["imageBlock", "imageInline"],
           },
 
           // Image moyenne
           {
             name: "medium",
-            title: "Image moyenne (w-48)",
+            title: "Image moyenne",
             icon: `
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="5" width="12" height="10" fill="#666"/>
@@ -298,14 +298,14 @@ const myCustomPreset: Preset = {
                 <rect x="16" y="5" width="2" height="10" fill="#CCC"/>
             </svg>
             `,
-            className: "mx-auto block w-48",
+            className: "mx-auto block medium-image",
             modelElements: ["imageBlock", "imageInline"],
           },
 
           // Image pleine largeur
           {
             name: "full",
-            title: "Image pleine (w-full)",
+            title: "Image pleine",
             icon: `
             <svg width="20" height="20" viewBox="0 0 20 20" fill="#444" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="5" width="16" height="10" fill="#444"/>
